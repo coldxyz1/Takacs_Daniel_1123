@@ -13,6 +13,4 @@ while choice!="0":
     elif choice=="3":
         pass
     elif choice=="4":
-        pass
-    elif choice=="5":
-        pass
+        tanulo_hozzaadasa()
