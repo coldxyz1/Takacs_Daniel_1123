@@ -17,18 +17,26 @@ def menu():
 
 def load_osztalyzatok():
     file=open(filename,"r",encoding="utf-8")
-    global cimsor
-    cimsor=file.readline().strip()
-    for row in file:
-        splitted=row.strip().split(";")
-        Nevek.append(splitted[0])
-        Fizika_jegy.append(float(splitted[1]))
-        Matek_jegy.append(float(splitted[1]))
+    file.readline()
+    for egysor in file:
+        darabolt=egysor.strip().split(";")
+        Nevek.append(darabolt[0])
+        Fizika_jegy.append(int(darabolt[1]))
+        Matek_jegy.append(int(darabolt[2]))
     file.close()
 
 def printTalulok():
     system("cls")
     print("Tanulók listája:\n")
-    for item in Nevek:
-        print(f"\t{item}")
-    input("Tovább...")
+    for item in range(len(Nevek)):
+        print(f"\tTanuló neve:{Nevek[item]} \nMatek jegye:{Matek_jegy[item]}\nFizika jegye:{Fizika_jegy[item]}")
+    input("\nTovább...")
+
+def tanulo_torlese():
+    system("cls")
+    print("Tanuló törlése:..")
+    Nev=input("Törlendő tanuló neve a listából: ")
+pass
+
+def tanulo_hozzaadasa():
+    pass
