@@ -9,8 +9,12 @@ while choice!="0":
     if choice=="1":
         printTalulok()
     elif choice=="2":
-        pass
+       print(f"Az tanulók fizika átlaga: {round(fizikaAtlag(Fizika_jegy),2)}")
+       input("Tovább...")
     elif choice=="3":
-        pass
+        print(f"Az tanulók fizika átlaga: {round(matekAtlag(Matek_jegy),2)}")
+        input("Tovább...")
     elif choice=="4":
+        jegyekTorlese()
+    elif choice=="5":
         tanulo_hozzaadasa()
